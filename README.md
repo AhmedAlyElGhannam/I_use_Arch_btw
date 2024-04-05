@@ -6,7 +6,7 @@ This is a guide on how to install Arch manually for the fun of it. Then, GNOME w
 
 ## Prologue: Installation Medium Preparation (Ventoy)
   1. Download arch iso image from their official website.
-  2. Either burn it to a flash drive using balena etcher **OR** use Ventoy instead for multi-OS boot from the same drive.
+  2. Either burn it to a flash drive using balena etcher **OR** use Ventoy instead for multi-OS boot from the same drive. \
 -- details will be added later
 
 
