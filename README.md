@@ -175,6 +175,8 @@ Now, with your filesystem mounted, simply install Arch along with some essential
 
 ## Book Two: Installing GNOME (Desktop Environment)
 
+### Chapter One: This is Easier Than I Thought!
+
 1. Update your system and restart.
 
    ```
@@ -209,5 +211,53 @@ Now, with your filesystem mounted, simply install Arch along with some essential
 
 ## Book Three: Drip is Unbreakable
 
+### Chapter One: Essential Components to Achieve Drip
 
- 
+1. Install the following packages:
+
+   ```
+   sudo pacman -S neofetch kitty flatpak starship
+   ```
+
+### Chapter Two: Extensions That Make Drip Achievable! (Extensions of Choice)
+
+1. Go to GNOME app store and download `extension manager`.
+2. Search for and install `dash2dock Animated` and `blur my shell`
+3. Enable them both and enjoy!
+
+
+### Chapter Three: That Terminal Looks Gorgous! (Kitty Configuration)
+
+1. Create a configuration file for `kitty`
+   ```
+   vim ~/.config/kitty/kitty.conf
+   ```
+   
+2. Copy the contents of the `kitty.conf` file in this repository and paste it in your file.
+
+
+### Chapter Four: Flex That Setup! (neofetch + starship shell prompt)
+
+1. Finally, enter the following lines to enable neofetch and starship:
+
+   ```
+   echo "neofetch" >> ~/.bashrc
+   echo "eval "$(starship init bash)"" >> ~/.bashrc
+   ```
+
+2. Source `.bashrc`.
+
+   ```
+   source ~/.bashrc
+   ```
+
+3. Open `kitty` and see the results for yourself. :)))
+
+
+## Epilogue: Asserting Dominance
+
+![](README_Photos/drip.png)
+
+
+
+_That's all folks!_
