@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a guide on how to install Arch manually for the fun of it. Then, GNOME will be installed as the desktop environment of choice. Additionally, I will add sections for all extensions/apps I use, so feel free to skip that. Make sure you use ethernet instead of wifi to avoid unnecessary obstacles.
+This is a guide on how to prepare my personal set up. Here, I install Arch manually for the fun of it then GNOME will be installed as the desktop environment of choice. Additionally, I will add sections for all extensions/apps I use, so feel free to skip that. Make sure you use ethernet instead of wifi to avoid unnecessary obstacles.
 
 ## Prologue: Installation Medium Preparation (Ventoy)
   1. Download arch iso image from their official website.
