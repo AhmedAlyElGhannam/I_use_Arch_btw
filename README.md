@@ -409,7 +409,7 @@ Now, with your filesystem mounted, simply install Arch along with some essential
 
 5. Profit!
 
-![](README_Photos/fedora.png)
+![](README_Photos/fedora39.png)
 
 
 
