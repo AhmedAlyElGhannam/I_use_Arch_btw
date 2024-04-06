@@ -222,7 +222,7 @@ Now, with your filesystem mounted, simply install Arch along with some essential
 ### Chapter Two: Extensions That Make Drip Achievable! (Extensions of Choice)
 
 1. Go to GNOME app store and download `extension manager`.
-2. Search for and install `dash2dock Animated` and `blur my shell`
+2. Search for and install `dash2dock Animated`, `blur my shell`, and `lock screen background`
 3. Enable them both and enjoy!
 
 
