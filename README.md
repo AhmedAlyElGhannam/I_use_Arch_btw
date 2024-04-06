@@ -254,9 +254,164 @@ Now, with your filesystem mounted, simply install Arch along with some essential
 3. Open `kitty` and see the results for yourself. :)))
 
 
-## Epilogue: Asserting Dominance
+### Chapter Five: Asserting Dominance
 
 ![](README_Photos/drip.png)
+
+
+
+## Book Four: Distrobox Setup
+
+### Chapter One: Before Anything
+
+1. Install `docker` and `podman`.
+  
+  ```
+  sudo pacman -S docker podman
+  ```
+
+2. Set `docker` and `podman` to run on startup in order to launch system containers at anytime.
+
+  ```
+  sudo systemctl enable docker
+  sudo systemctl enable podman
+  ```
+
+3. Add your user to docker group to get sudo privileges.
+
+  ```
+  sudo usermod -aG docker $USER
+  ```
+
+4. Install `distrobox`.
+
+  ```
+  sudo pacman -S distrobox
+  ```
+
+### Chapter Two: Ubuntu 20.04 Container
+
+1. Create a container for Ubuntu 20.04 using the following command. I made sure to include a `--nvidia` argument because I have an Nvidia GPU.
+
+  ```
+  distrobox create -n ubuntu20 -i ubuntu:20.04 --init --additional-packages "systemd" --nvidia
+  ```
+
+2. In order to open and close the container a bit faster, I created aliases for the long versions of these commands. The two commands below basically copy those aliases to `.bashrc`. DO NOT FORGET TO SOURCE IT AFTER ADDING THEM.
+
+   ```
+   echo 'alias ubuntu20_run="distrobox enter ubuntu20"' >> ~/.bashrc
+   echo 'alias ubuntu20_stop="distrobox-stop ubuntu20"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+3. To run it, simply type `ubuntu20_run` in terminal and exit it by typing `exit`. In order to stop it from running in the background, enter `ubuntu20_stop`.
+
+4. Make sure to install both `neofetch` and `starship` to flex that setup:
+
+   ```
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install neofetch
+   sudo curl -sS https://starship.rs/install.sh | sh
+   ```
+
+5. Profit!
+
+![](README_Photos/ubuntu20.png)
+
+
+### Chapter Three: Ubuntu 22.04 Container
+
+1. Create a container for Ubuntu 22.04 using the following command. I made sure to include a `--nvidia` argument because I have an Nvidia GPU.
+
+  ```
+  distrobox create -n ubuntu22 -i ubuntu:22.04 --init --additional-packages "systemd" --nvidia
+  ```
+
+2. In order to open and close the container a bit faster, I created aliases for the long versions of these commands. The two commands below basically copy those aliases to `.bashrc`. DO NOT FORGET TO SOURCE IT AFTER ADDING THEM.
+
+   ```
+   echo 'alias ubuntu_run="distrobox enter ubuntu22"' >> ~/.bashrc
+   echo 'alias ubuntu_stop="distrobox-stop ubuntu22"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+3. To run it, simply type `ubuntu22_run` in terminal and exit it by typing `exit`. In order to stop it from running in the background, enter `ubuntu22_stop`.
+
+4. Make sure to install both `neofetch` and `starship` to flex that setup:
+
+   ```
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install neofetch
+   sudo curl -sS https://starship.rs/install.sh | sh
+   ```
+
+5. Profit!
+
+![](README_Photos/ubuntu22.png)
+
+
+### Chapter Four: Debian 12 Container
+
+1. Create a container for Debian 12 using the following command. I made sure to include a `--nvidia` argument because I have an Nvidia GPU.
+
+  ```
+  distrobox create -n debian12 -i debian:latest --init --additional-packages "systemd" --nvidia
+  ```
+
+2. In order to open and close the container a bit faster, I created aliases for the long versions of these commands. The two commands below basically copy those aliases to `.bashrc`. DO NOT FORGET TO SOURCE IT AFTER ADDING THEM.
+
+   ```
+   echo 'alias debian12_run="distrobox enter debian12"' >> ~/.bashrc
+   echo 'alias debian12_run="distrobox-stop debian12"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+3. To run it, simply type `debian12_run` in terminal and exit it by typing `exit`. In order to stop it from running in the background, enter `debian12_run`.
+
+4. Make sure to install both `neofetch` and `starship` to flex that setup:
+
+   ```
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install neofetch
+   sudo curl -sS https://starship.rs/install.sh | sh
+   ```
+
+5. Profit!
+
+![](README_Photos/debian12.png)
+
+### Chapter Five: Fedora 39 Container
+
+1. Create a container for Fedora 39 using the following command. I made sure to include a `--nvidia` argument because I have an Nvidia GPU.
+
+  ```
+  distrobox create -n fedora39 -i fedora:39 --init --additional-packages "systemd" --nvidia
+  ```
+
+2. In order to open and close the container a bit faster, I created aliases for the long versions of these commands. The two commands below basically copy those aliases to `.bashrc`. DO NOT FORGET TO SOURCE IT AFTER ADDING THEM.
+
+   ```
+   echo 'alias fedora39_run="distrobox enter fedora39"' >> ~/.bashrc
+   echo 'alias fedora39_stop="distrobox-stop fedora39"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+3. To run it, simply type `fedora39_run` in terminal and exit it by typing `exit`. In order to stop it from running in the background, enter `fedora39_stop`.
+
+4. Make sure to install both `neofetch` and `starship` to flex that setup:
+
+   ```
+   sudo dnf install fedora-upgrade && sudo fedora-upgrade -y
+   sudo dnf install neofetch
+   sudo curl -sS https://starship.rs/install.sh | sh
+   ```
+
+5. Profit!
+
+![](README_Photos/fedora.png)
+
+
 
 
 
